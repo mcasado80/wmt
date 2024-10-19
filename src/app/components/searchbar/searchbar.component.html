@@ -1,0 +1,7 @@
+<ion-searchbar [(ngModel)]="query" (ionInput)="searchLocation()" placeholder="Buscar dirección..."></ion-searchbar>
+
+<ion-list *ngIf="suggestions.length > 0">
+  <ion-item *ngFor="let suggestion of suggestions" (click)="selectSuggestion(suggestion)">
+    {{ suggestion.display_name }}
+  </ion-item>
+</ion-list>

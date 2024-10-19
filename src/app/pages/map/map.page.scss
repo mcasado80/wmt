@@ -1,0 +1,22 @@
+#mapId {
+    height: 100vh; /* El mapa ocupa el 100% de la altura de la pantalla */
+    width: 100%; /* El mapa ocupa el 100% del ancho */
+    position: relative; /* Asegurar que los elementos flotantes estén sobre el mapa */
+  }
+  
+  .radio-label {
+    position: absolute;
+    bottom: 20px; /* Ajustar el espacio respecto al borde inferior */
+    left: 10px; /* Alineado a la izquierda */
+    font-size: 12px; /* Tamaño de letra más pequeño */
+    color: #555; /* Color gris suave */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+    padding: 5px;
+    border-radius: 4px;
+    z-index: 1000; /* Asegurar que el label esté sobre el mapa */
+  }
+  
+  ion-fab {
+    z-index: 1000; /* Asegurar que el FAB esté sobre el mapa */
+  }
+  
