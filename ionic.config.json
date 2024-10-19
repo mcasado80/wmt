@@ -1,0 +1,7 @@
+{
+  "name": "wmt",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
