@@ -3,6 +3,7 @@ import axios from 'axios';
 import * as L from 'leaflet';
 import { SearchbarComponent } from 'src/app/components/searchbar/searchbar.component';
 import { StorageService } from 'src/app/services/storage.service'; // Servicio para obtener el radio guardado
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-map',
@@ -49,7 +50,7 @@ export class MapPage implements OnInit {
         this.map = L.map('mapId').setView([lat, lng], 13);
 
         // Cargar las tiles de OpenStreetMap
-        L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=BbbnyYoVWat2ZyQZHD82', {
+        L.tileLayer(`https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=${environment.osm_key}`, {
           attribution: '&copy; <a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a> contributors',
           referrerPolicy: 'no-referrer'
         }).addTo(this.map);
